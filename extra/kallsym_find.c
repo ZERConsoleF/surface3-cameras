@@ -9,7 +9,7 @@ static struct kprobe kp = {
 
 unsigned long (*kallsyms_lookup_name_t)(const char *name);
 
-static int (*kallsym_efivar_entry_get)(struct efivar_entry *entry, u32 *attributes, unsigned long *size, void *data) = NULL;
+int (*kallsym_efivar_entry_get)(struct efivar_entry *entry, u32 *attributes, unsigned long *size, void *data) = NULL;
 
 unsigned long kallsyms_lookup_name_f(const char *name)
 {
